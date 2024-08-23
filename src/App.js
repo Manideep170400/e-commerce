@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Center from './MainFolder/center';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
-function App() {
+const App = () => {
+  const navigate = useNavigate(); 
+
+  const handleToggle = () => {
+    navigate('/center'); 
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>Hello World</p>
+      <button onClick={handleToggle}>Go to Center
+        <span>arrow</span>
+      </button>
+      <Routes>
+        <Route path="/center" element={<Center />} />
+        {/* <Route path="/label" element={<Center />} /> */}
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
