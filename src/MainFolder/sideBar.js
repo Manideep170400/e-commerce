@@ -8,7 +8,9 @@ const SideBar = ()=> {
     }
         return (
             <div>
-                <p onClick={handleToggle}>SideBar</p>
+                <p onClick={handleToggle} >SideBar  <span class="material-symbols-outlined">
+arrow_forward_ios
+</span></p>
             </div>
         )
     }

@@ -16,7 +16,9 @@ const Center  = () =>
         return (
             <div> 
                 {items[0].title}
-              <p onClick={handleToggle}>{items[0].children.label}</p>
+              <p onClick={handleToggle}>{items[0].children.label}  <span class="material-symbols-outlined">
+arrow_forward_ios
+</span></p>
                <p>center</p>
             </div>
         )
