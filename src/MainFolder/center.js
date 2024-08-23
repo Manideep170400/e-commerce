@@ -1,23 +1,26 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-class Center extends React.Component {
-    render() {
+const Center  = () => 
+     {
+        const navigate = useNavigate();
+        const handleToggle = () => {
+            navigate("/center/sidebar")
+        }
         const items = [{
-            
-                label  : 'name',
+                title  : 'name',
                 children : {
                     label : 'second name'
                 }
         }]
         return (
             <div> 
-                {items[0].label}
-                {items[0].children.label}
+                {items[0].title}
+              <p onClick={handleToggle}>{items[0].children.label}</p>
                <p>center</p>
             </div>
         )
     }
 
-}
 
 export default Center
