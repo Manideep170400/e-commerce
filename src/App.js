@@ -22,6 +22,7 @@ arrow_forward_ios
       <Routes>
         <Route path="/center" element={<Center />} />
         <Route path="/center/sidebar" element={<SideBar />} />
+        <Route path="/center/sidebar/home" element={<div>home</div> } />
       </Routes>
     </div>
   );
